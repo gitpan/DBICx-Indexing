@@ -11,7 +11,7 @@ WriteMakefile(
   NAME      => 'DBICx::Indexing',
   AUTHOR    => "Pedro\ Melo\ \<melo\@cpan\.org\>",
   ABSTRACT  => "Easy\ way\ do\ declare\ extra\ indices\ to\ your\ tables",
-  VERSION   => '0.001',
+  VERSION   => '0.002',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.31) } ? (LICENSE => 'perl') : ()),
   PREREQ_PM    => {

@@ -6,8 +6,6 @@ Makefile.PL
 README
 dist.ini
 lib/DBICx/Indexing.pm
-lib/DBICx/pod2htmd.tmp
-lib/DBICx/pod2htmi.tmp
 t/00-compile.t
 t/01-class-data.t
 t/05-cover-indexes.t

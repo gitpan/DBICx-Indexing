@@ -16,4 +16,4 @@ requires:
   Test::More: 0.92
 resources:
   repository: http://github.com/melo/dbicx-indexing/
-version: 0.001
+version: 0.002

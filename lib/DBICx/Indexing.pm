@@ -1,5 +1,5 @@
 package DBICx::Indexing;
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 use strict;
 use warnings;
@@ -76,7 +76,7 @@ DBICx::Indexing - Easy way do declare extra indices to your tables
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
@@ -165,9 +165,16 @@ Ignored, covered by the extra index.
 If you need to define a C<sqlt_deploy_hook()> for a specific source,
 make sure that your code calls the next C<sqlt_deploy_hook()> in turn.
 
-Just end your own C<sqlt_deploy_hook()> with:
+You own C<sqlt_deploy_hook()> should look something like this:
 
-    $self->next::method(@_) if $self->next::can;
+    sub sqlt_deploy_hook {
+      my $self = shift;
+      my ($table) = @_;
+      
+      ... your code goes here ...
+      
+      $self->next::method(@_) if $self->next::can;
+    }
 
 
 =head1 METHODS
